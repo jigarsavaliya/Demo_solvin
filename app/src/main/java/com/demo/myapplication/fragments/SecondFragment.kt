@@ -1,4 +1,4 @@
-package com.demo.myapplication
+package com.demo.myapplication.fragments
 
 import ItemModel
 import android.os.Bundle
@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.demo.myapplication.R
 import kotlinx.android.synthetic.main.fragment_second.*
 
 /**

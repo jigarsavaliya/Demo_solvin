@@ -1,6 +1,9 @@
 import android.net.Uri
 import java.io.Serializable
 
+/**
+ * Model for holding dowmloading items
+ */
 class ItemModel(val id: Int, val url: String) :Serializable{
     var Path:String?=null;
     var Size:String?=null;

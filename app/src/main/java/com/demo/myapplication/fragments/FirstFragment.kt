@@ -1,4 +1,4 @@
-package com.demo.myapplication
+package com.demo.myapplication.fragments
 
 import DownloadAdapter
 import ItemModel
@@ -14,6 +14,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.demo.myapplication.utils.PermissionManager
+import com.demo.myapplication.R
 import com.karumi.dexter.MultiplePermissionsReport
 import kotlinx.android.synthetic.main.fragment_first.*
 import java.io.File
@@ -22,7 +24,7 @@ import java.io.File
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
  */
-class FirstFragment : Fragment(),PermissionManager.PermissionGrantedListener {
+class FirstFragment : Fragment(), PermissionManager.PermissionGrantedListener {
 
     lateinit var mAdapter: DownloadAdapter
     override fun onCreateView(
