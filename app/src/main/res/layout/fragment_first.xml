@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:padding="8dp"
     android:layout_height="match_parent"
+    android:background="#dedede"
     tools:context=".fragments.FirstFragment">
 
    <androidx.appcompat.widget.AppCompatEditText
@@ -12,6 +13,9 @@
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        app:layout_constraintEnd_toEndOf="parent"
+       android:background="@android:color/white"
+       android:hint="Enter URL to download"
+       android:padding="8dp"
        app:layout_constraintStart_toStartOf="parent"
        app:layout_constraintTop_toTopOf="parent" />
 
@@ -20,7 +24,9 @@
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:layout_marginTop="8dp"
+       style="@style/Widget.AppCompat.Button.Borderless.Colored"
        android:text="Download"
+       android:background="@android:color/white"
        app:layout_constraintEnd_toEndOf="parent"
        app:layout_constraintStart_toStartOf="parent"
        app:layout_constraintTop_toBottomOf="@+id/et_input" />
@@ -30,6 +36,8 @@
        android:layout_width="match_parent"
        android:layout_height="0dp"
        android:layout_marginTop="8dp"
+       tools:listitem="@layout/item_download"
+       tools:itemCount="5"
        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
        app:layout_constraintBottom_toBottomOf="parent"
        app:layout_constraintEnd_toEndOf="parent"

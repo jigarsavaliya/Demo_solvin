@@ -39,6 +39,7 @@ class DownloadAdapter(var list: ArrayList<ItemModel>, val listener: (ItemModel) 
         if (payloads.firstOrNull() != null) {
             with(holder.itemView) {
                 (payloads.first() as Bundle).getInt("progress").also {
+                    progressBar.isIndeterminate=false
                     progressBar.progress = it
                     progressBar.isVisible = it < 100
                 }

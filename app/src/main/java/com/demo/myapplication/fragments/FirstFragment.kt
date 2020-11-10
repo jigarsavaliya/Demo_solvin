@@ -86,9 +86,8 @@ if (!item.isDownloading){
                   )
           }
 
-
-
                   val downloadId = downloadManager.enqueue(request)
+
                   val query = DownloadManager.Query().setFilterById(downloadId)
 
           Thread {
@@ -116,7 +115,7 @@ if (!item.isDownloading){
                       cursor.getColumnIndex(DownloadManager.COLUMN_DESCRIPTION)
                   )
                   val downloadProgress =
-                      (totalBytesDownloaded.toDouble() / totalBytes.toDouble() * 100f).toInt()
+                      ((totalBytesDownloaded.toDouble() / totalBytes.toDouble() )* 100f).toInt()
 
 
                   rv_items.post {
